@@ -7,9 +7,9 @@ applications:
     - resources-finalizer.argocd.argoproj.io
     project: devops
     source:
-      repoURL: git@github.com:jitendersinghdevops/argo-demo-app.git
+      repoURL: https://github.com/vinaypalvirk51/Caledon.git
       targetRevision: HEAD
-      path: .
+      path: ../../deployment/deploy.yaml
     destination:
       server: https://kubernetes.default.svc
       namespace: las-test-app
@@ -30,8 +30,7 @@ projects:
     - resources-finalizer.argocd.argoproj.io
     description: This is Demo DMP project
     sourceRepos:
-    - git@github.com:jitendersinghdevops/argo-demo-app.git
-    - git@github.com:Devops-coach-js/LAS-DMP.git
+    - https://github.com/vinaypalvirk51/Caledon.git
     destinations:
     - namespace: '*'
       server: https://kubernetes.default.svc
